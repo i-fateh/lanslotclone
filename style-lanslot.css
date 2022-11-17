@@ -1,6 +1,10 @@
 /* MESSAGE AUX RECRUTEURS :)
     Ce code a été ecris il y a déja quelques années
     Je le laisse dans l'état afin de garder une trace de mes progrès
+
+    MESSAGE TO RECRUITERS :)
+    This code was written a few years ago
+    I leave it as is to keep track of my progress
 */
 
 * {
@@ -10,6 +14,10 @@
 body {
     background: #161527;
 }
+
+#content {display: block;}
+
+
 header{
     background: #141324;
     padding: 20px;
@@ -41,15 +49,15 @@ header p:hover {
 }
 #section1 {
     display: flex;
-    background:#141324;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom,#141324, #4A4AD5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #141324, #4A4AD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 1050px;
+    background:#141324;
+    background: -webkit-linear-gradient(to bottom,#141324, #4A4AD5);  
+    background: linear-gradient(to bottom, #141324, #4A4AD5);
+    height: 1050px; width: 100vw;
 }
 .leadContainer {
     padding-top: 20px;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -243,8 +251,9 @@ header p:hover {
     z-index: 2;
 }
 .textContainer {
-    display: flex;
-    flex-direction: column;
+    display: flex;  align-items: flex-start; justify-content: flex-start; padding: 0px;
+    flex-direction: column; overflow: scroll;
+    width: 50%; height: auto
 }
 .row img {
     margin: 20px;
@@ -263,7 +272,6 @@ header p:hover {
     margin: 12px;
 }
 .film {
-    /* padding: 20px; */
     animation-name: trans;
     animation-duration: 55s;
     animation-direction: reverse;
@@ -320,9 +328,9 @@ header p:hover {
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-    background: #161527;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #161527, #4445C2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #161527, #4445C2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #161527;  
+    background: -webkit-linear-gradient(to top, #161527, #4445C2);  
+    background: linear-gradient(to top, #161527, #4445C2); 
 }
 .foot1 h1 {
     width: 100%;
@@ -457,4 +465,17 @@ footer span {
     position: absolute;
     right: 40px;
     z-index: 10;
+}
+#show{display: none !important;}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles pour cette Media Queries */
+    #content {display: none;}
+    body {display: flex; align-items: center; justify-content: center; 
+    height: 100vh; background-image: url('./images-lanslot/manette2.png');
+    background-size: cover; background-position: left;
+    }
+    #show{display: block !important; color: white; width: 70%; font-size: 1.8em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 }
