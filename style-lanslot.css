@@ -252,7 +252,7 @@ header p:hover {
 }
 .textContainer {
     display: flex;  align-items: flex-start; justify-content: flex-start; padding: 0px;
-    flex-direction: column; overflow: scroll;
+    flex-direction: column;
     width: 50%; height: auto
 }
 .row img {
